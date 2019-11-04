@@ -1,0 +1,62 @@
+{
+  "name": "@dwebjs/dappdb",
+  "description": "Decentralized, distributed and scaleable database management system (dDBMS).",
+  "version": "1.0.0",
+  "contributors": [
+    "Jared Rice Sr. <jared@dpeeps.com>",
+    "Peeps Labs <labs@dpeeps.com>"
+  ],
+  "bugs" {
+    "url": "https://github.com/dwebjs/dappdb/issues"
+  },
+  "dependencies": {
+    "@dwebjs/ddatabase": "dwebjs/ddatabase#master",
+    "@dwebjs/protocol": "dwebjs/protocol#master",
+    "array-lru": "^1.1.1",
+    "bulk-write-stream": "^1.1.3",
+    "codecs": "^1.2.1",
+    "compare": "^2.0.0",
+    "inherits": "^2.0.3",
+    "mutexify": "^1.2.0",
+    "nanoiterator": "^1.1.0",
+    "protocol-buffers-encodings": "^1.1.0",
+    "random-access-file": "^2.0.1",
+    "sodium-universal": "^2.0.0",
+    "thunky": "^1.0.2",
+    "unordered-array-remove": "^1.0.2",
+    "unordered-set": "^2.0.0",
+    "varint": "^5.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.12.0",
+    "protocol-buffers": "^4.0.4",
+    "random-access-latency": "^1.0.0",
+    "random-access-memory": "^3.0.0",
+    "seed-random": "^2.2.0",
+    "standard": "^11.0.0",
+    "stream-collection": "^1.0.1",
+    "tape": "^4.9.0"
+  },
+  "homepage": "https://dwebs.io",
+  "keywords": [
+    "dweb",
+    "distributed-web",
+    "dweb-dappdb",
+    "dappdb"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwebjs/dappdb"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js",
+    "protobuf": "protocol-buffers schema.proto -o lib/messages.js"
+  },
+  "standard": {
+    "ignore": [
+      "test/helpers/fuzzing.js"
+    ]
+  }
+}
